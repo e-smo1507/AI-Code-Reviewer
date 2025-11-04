@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  font-family: "Inter", sans-serif;
+  overflow: hidden; /* prevent double scrollbars */
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.left, .right {
+  flex: 1;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- LEFT SIDE ---- */
+.left {
+  background-color: #1e1e1e;
+  padding: 1rem;
+}
+
+.code-container {
+  flex: 1;
+  overflow-y: auto; /* allow scrolling while editing long code */
+  border-radius: 0.5rem;
+}
+
+.code {
+  min-height: 100%;
+  background-color: #161616;
+  border-radius: 0.5rem;
+}
+
+.review {
+  background-color: #00e676;
+  color: black;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  text-align: center;
+  width: fit-content;
+  margin-top: 0.8rem;
+  align-self: flex-end;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.review:hover {
+  background-color: #00c853;
+  transform: scale(1.05);
+}
+
+/* ---- RIGHT SIDE ---- */
+.right {
+  background-color: #242424;
+  padding: 1rem 2rem;
+  overflow-y: auto; /* ✅ Enables scrolling for long AI reviews */
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* ---- Markdown Styling ---- */
+.right h1, .right h2, .right h3 {
+  color: #00e676;
+  margin-bottom: 0.5rem;
+}
+
+.right p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.right code {
+  background-color: #333;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+  color: #00bfa5;
+}
+
+/* ---- Loader ---- */
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 4px solid #444;
+  border-top: 4px solid #00e676;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
