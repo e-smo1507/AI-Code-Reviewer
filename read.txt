@@ -1,2 +1,0 @@
-npm run dev frontend
-npx nodemon backend
