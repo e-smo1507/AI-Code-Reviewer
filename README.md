@@ -44,7 +44,7 @@ It provides step-by-step feedback, highlights potential issues, and gives detail
 
 ## 🖼️ Preview
 
-> Go to preview folder
+>[ Go to preview folder](https://www.linkedin.com/posts/esmoli-gupta-171215280_geminiapi-ai-fullstack-activity-7391473644763451394-52Ij?utm_source=share&utm_medium=member_desktop&rcm=ACoAAERgC6UBza_w5cEy732T7PC1-EqCIT36hwk)
 
 Example layout:
 
